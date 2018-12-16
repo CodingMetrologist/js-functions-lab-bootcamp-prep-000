@@ -1,15 +1,31 @@
 // write your code below!
 
 function happyHolidays(string){
-   return ('Happy Holidays!')
+   return ('Happy holidays!')
 }
 
 function happyHolidaysTo(string){
-  var holidayGreet = 'Happy holidays'
-  return '${holidayGreet}, ${name}!'
+  return ('Happy holidays, ${name}!')
 }
 
 function happyHolidayTo(string){
   
   return `Happy ${holiday}, ${name}!`
 }
+
+
+
+
+
+  describe('happyHolidayTo(holiday, name)', () => {
+    it('returns "Happy ${holiday}, ${name}!"', () => {
+      expect(happyHolidayTo('Independence Day', 'you')).toEqual('Happy Independence Day, you!')
+    })
+  })
+
+  describe('holidayCountdown(holiday, days)', () => {
+    it('returns "It\'s ${days} days until ${holiday}!"', () => {
+      expect(holidayCountdown("Mother's Day", 20)).toEqual("It's 20 days until Mother's Day!")
+    })
+  })
+})
